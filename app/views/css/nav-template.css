@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #f2f5f7;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+nav {
+    height: 6rem;
+    width: 100%;
+    background-color: #B20000;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+/*Styling logo*/
+.logo {
+    padding: 1vh 1vw;
+    text-align: center;
+}
+
+.logo img {
+    height: 5rem;
+    width: 5rem;
+}
+
+/*Styling Links*/
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0 0.3vw;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    margin: 0 0.3vw;
+    color: #f2f5f7;
+    text-decoration: none;
+    text-align: center;
+    transition: all .5s;
+    padding: 0.9rem;
+    border-radius: .2rem;
+    font-size: smaller;
+
+}
+
+.nav-links li a:hover {
+    color: #B20000;
+    background-color: white;
+}
+.link-nav1 {
+    text-decoration: none;
+    
+}
+.link-nav1:hover{
+    color: #07d3ee;
+}
+/*Styling Buttons*/
+
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    width: 400px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 30
+}
+
+
+.input {
+    width: 100%;
+    height: 50px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #2020203b;
+    color: #0d0c22;
+    transition: 0.3s ease;
+
+}
+
+.input::placeholder {
+    color: #fdfdfdb2;
+    font-size: small;
+}
+
+.input:focus,
+input:hover {
+    outline: none;
+    border-color: rgb(255, 255, 255);
+    background-color: #0000003f;
+    box-shadow: 0 0 0 4px rgba(73, 0, 0, 0.1);
+    color: #fff;
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #ffffff;
+    width: 1rem;
+    height: 1rem;
+}
+
+.login-button {
+    background-color: transparent;
+
+    border-radius: 1em;
+    padding: 0.6rem 0.8rem;
+    margin-left: 2vw;
+
+    cursor: pointer;
+
+}
+
+.buttons {
+    max-width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn-primary {
+    color: white;
+    background-color: transparent;
+    background-image: none;
+
+    border: solid 1px #e6e6e6;
+}
+
+.btn-primary:hover path {
+    color: #131418;
+}
+
+.btn-primary:hover {
+    color: #131418;
+    background-color: #e6e6e6;
+    border-color: #e6e6e6;
+
+}
+
+.login-button:hover {
+    color: #131418;
+    background-color: #f2f5f7;
+    border: 1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+
+.join-button {
+    color: #f2f5f7;
+    background-color: transparent;
+    border: 1.5px solid #f2f5f7;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.join-button:hover {
+
+    color: #131418;
+    background-color: #f2f5f7;
+
+    border: 1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.hamburger {
+    display: none;
+}
+
+/*Stying for small screens*/
+.nav2 {
+    background-color: #005C6D;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.nav-links-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .nav2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links-mobile {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        flex-direction: row;
+    }
+
+
+
+    .icon {
+        position: absolute;
+        left: 1rem;
+        
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+
+    .buttons {
+        display: none;
+    }
+
+}
